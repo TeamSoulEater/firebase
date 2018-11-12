@@ -66,3 +66,6 @@ functions/node_modules
 .env
 
 .idea
+
+*.xml
+.idea/firebase.iml
