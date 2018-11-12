@@ -9,6 +9,10 @@ service cloud.firestore {
       allow update, delete: if isSignedIn() && isOwner(userId);
     }
 
+    match /visitCards/{visitCardId} {
+        allow create: if isValidCard();
+    }
+
     // Rules Basics
     function incomingData() {
       return request.resource.data
